@@ -103,3 +103,7 @@ func ProjectPath() string {
 func SessionID() string {
 	return sessionID
 }
+
+func SetSessionID(value string) {
+	sessionID = value
+}

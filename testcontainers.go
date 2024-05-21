@@ -47,3 +47,10 @@ func ExtractDockerSocket() string {
 func SessionID() string {
 	return core.SessionID()
 }
+
+// SetSessionID lets you override the session ID. This is useful when you want to share test container state
+// across multiple non sibling (different parent-pid) processes on the same machine, e.g. when running tests
+// locally under Bazel.
+func SetSessionID(value string) {
+	core.SetSessionID(value)
+}
